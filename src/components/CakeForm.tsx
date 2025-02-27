@@ -56,12 +56,13 @@ const AddCake: React.FC = () => {
 
             {/* Bootstrap Alert */}
             {alertMessage && (
-                <div className={`alert alert-${alertType} alert-dismissible fade show`} role="alert">
+                <div className={`alert alert-${alertType} alert-dismissible fade show position-relative`} role="alert">
                     {alertMessage}
-                    <button type="button" className="close" onClick={() => setAlertMessage(null)}>
-                        <span>&times;</span>
+                    <button type="button" className="btn-close position-absolute top-0 end-0" onClick={() => setAlertMessage(null)}>
                     </button>
                 </div>
+
+                
             )}
 
             <form onSubmit={handleSubmit} className="cake-form">

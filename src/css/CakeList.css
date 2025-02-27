@@ -1,0 +1,28 @@
+.cake-image {
+    width: 100%; /* Ensure it scales according to the parent container */
+    height: 100%; /* Scale the image within the container */
+    object-fit: cover;     /* Ensure the image covers the area while maintaining aspect ratio */
+    object-position: center;
+  }
+  
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure that the card content is contained */
+    cursor: pointer;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 10px;
+}

@@ -17,7 +17,14 @@ const AddCake: React.FC = () => {
     const validateForm = () => {
         const newErrors: { [key: string]: string } = {};
         if (!name.trim()) newErrors.name = "Cake name is required.";
-        if (!comment.trim()) newErrors.comment = "Comment is required.";
+        // if (!comment.trim()) newErrors.comment = "Comment is required.";
+        if (!comment.trim()) {
+            newErrors.comment = "Comment is required.";
+        } else if (comment.length < 5) {
+            newErrors.comment = "Comment must be at least 5 characters long.";
+        } else if (comment.length > 200) {
+            newErrors.comment = "Comment must be at most 200 characters long.";
+        }
         if (!imageUrl.trim()) newErrors.imageUrl = "Image URL is required.";
         if (yumFactor < 1 || yumFactor > 5) newErrors.yumFactor = "Yum Factor must be between 1 and 5.";
 
